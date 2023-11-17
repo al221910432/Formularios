@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Document</title>
+</head>
+<body>
+  <h1 style="text-align: center;">4.CODIFICACIÓN.CURVA DE MEMORIA</h1>
+  <h4>Instrucciones:</h4>
+  <h4 style="text-align: justify;">
+    "A continuación voy a leerle una lista de palabras, las cuales debe repetir, sin importar el orden, inmediatamente
+después de que yo termine. Repetiré la misma lista tres veces y cada vez usted deberá decirme todas las palabras
+que recuerde sin importar si las mencionó antes o no. Más adelante voy a pedirle que repita nuevamente todas las
+palabras que recuerde"</h4>
+    <br>
+    <h4>Observaciones:</h4>
+    <h4 style="text-align: justify;">Se proporcionan los tres ensayos. (Evocación 20 minutos después).</h4>
+    <br>
+    <h4 style="text-align: justify;">Se anota con números el orden en el que el sujeto responde.</h4>
+      <br>
+      <h4 style="text-align:  center;">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3</h4>
+      <br>
+      <h4 style="text-align: center;">Cara&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cara&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cara</h4>
+      <h4 style="text-align: center;">Pera&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pera&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pera</h4>
+      <h4 style="text-align: center;">Burro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Burro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Burro</h4>
+      <h4 style="text-align: center;">Fresa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fresa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fresa</h4>
+      <h4 style="text-align: center;">Pato&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pato&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pato</h4>
+      <h4 style="text-align: center;">Ceja&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ceja&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ceja</h4>
+      <h4 style="text-align: center;">Rana&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rana&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rana</h4>
+      <h4 style="text-align: center;">Hombro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hombro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hombro</h4>
+      <h4 style="text-align: center;">Cabra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cabra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cabra</h4>
+      <h4 style="text-align: center;">Piña&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Piña&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Piña</h4>
+      <h4 style="text-align: center;">Codo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Codo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Codo</h4>
+      <h4 style="text-align: center;">Lima&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lima&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lima</h4>
+ <br>
+  <form #formularioMascota="ngForm" (ngSubmit)="formularioEnviado()">
+    Secuencia1:
+    <input type="text" name="secuencia1" placeholder="secuencia1(1,4,6,2)" [(ngModel)]="cuatroModel.secuencia1">
+    <br><br>
+    Secuencia2:
+    <input type="text" name="secuencia2" placeholder="secuencia2(1,4,6,2)" [(ngModel)]="cuatroModel.secuencia2">
+    <br><br>
+    Secuencia3:
+    <input type="text" name="secuencia3" placeholder="secuencia3(1,4,6,2)" [(ngModel)]="cuatroModel.secuencia3">
+    <br><br>
+    Curva1(12):
+    <input type="text" name="curva1" placeholder="curva1" [(ngModel)]="cuatroModel.curva1">
+    <br><br>
+    Curva2(12):
+    <input type="text" name="curva2" placeholder="curva2" [(ngModel)]="cuatroModel.curva2">
+    <br><br>
+    Curva3(12):
+    <input type="text" name="curva3" placeholder="curva3" [(ngModel)]="cuatroModel.curva3">
+    <br><br>
+    Intrusiones:
+    <input type="text" name="intrusiones" placeholder="intrusiones" [(ngModel)]="cuatroModel.intrusiones">
+    <br><br>
+    Perseveraciones:
+    <input type="text" name="perseveraciones" placeholder="perseveraciones" [(ngModel)]="cuatroModel.perseveraciones">
+    <br><br>
+    Primacia:
+    <input type="text" name="primacia" placeholder="primacia" [(ngModel)]="cuatroModel.primacia">
+    <br><br>
+    Recencia:
+    <input type="text" name="recencia" placeholder="recencia" [(ngModel)]="cuatroModel.recencia">
+    <br><br>
+    Categoria 3:
+    <input type="text" name="categoria3" placeholder="categoria3" [(ngModel)]="cuatroModel.categoria3">
+    <br><br>
+    CurvaAprendizaje:
+    <input type="text" name="curvaaprendizaje" placeholder="curvaaprendizaje" [(ngModel)]="cuatroModel.curvaaprendizaje">
+    <br><br>
+    Volumen Promedio:
+    <input type="text" name="volumenpro" placeholder="volumenpro" [(ngModel)]="cuatroModel.volumenpro">
+    <br><br>
+    <button type="submit">Guardar</button>
+  </form>
+    <br>
+    <br>
+  
+ 
+</body>
+</html>
